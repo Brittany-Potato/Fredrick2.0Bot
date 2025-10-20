@@ -2,14 +2,16 @@
 from twitchio.ext import commands
 # Correct the import path to be absolute from the project root
 from twitch_bot.commands import gemini_ai as gemini_commands 
-from config import TWITCH_TOKEN, TWITCH_CHANNEL, TWITCH_CLIENT_ID, TWITCH_NICK
+from config import TWITCH_TOKEN, TWITCH_CHANNEL, TWITCH_CLIENT_ID, TWITCH_CLIENT_SECRET, TWITCH_NICK, TWITCH_BOT_ID
 
 class TwitchBot(commands.Bot):
     def __init__(self):
         super().__init__(
             token=TWITCH_TOKEN,
             client_id=TWITCH_CLIENT_ID,
+            client_secret=TWITCH_CLIENT_SECRET,
             nick=TWITCH_NICK,
+            user_id=TWITCH_BOT_ID,
             prefix="!",
             initial_channels=[TWITCH_CHANNEL]
         )

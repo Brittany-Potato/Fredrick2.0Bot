@@ -1,8 +1,8 @@
 # main.py
 
 import asyncio
-from discord.bot import bot as discord_bot
-from twitch.bot import bot as twitch_bot
+from discord_bot.bot import bot as discord_bot
+from twitch_bot.bot import bot as twitch_bot
 from config import DISCORD_TOKEN
 
 async def main():

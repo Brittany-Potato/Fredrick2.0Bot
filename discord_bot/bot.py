@@ -1,6 +1,6 @@
 # Discord/bot.py
 
-import discord 
+import discord
 from discord.ext import commands
 import os
 
@@ -16,3 +16,5 @@ async def on_ready():
     for filename in os.listdir('./discord_bot.cogs'):
         if filename.endswith('.py'):
             await bot.load_extension(f"discord_bot.cogs.{filename[:3]}")
+            
+            
