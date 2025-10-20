@@ -1,0 +1,4 @@
+discord.py
+twitchio
+google-generativeai
+python-dotenv
