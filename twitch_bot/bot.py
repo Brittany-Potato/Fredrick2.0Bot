@@ -11,14 +11,14 @@ class TwitchBot(commands.Bot):
             client_id=TWITCH_CLIENT_ID,
             client_secret=TWITCH_CLIENT_SECRET,
             nick=TWITCH_NICK,
-            user_id=TWITCH_BOT_ID,
+            bot_id=TWITCH_BOT_ID,
             prefix="!",
             initial_channels=[TWITCH_CHANNEL]
         )
         
     async def event_ready(self):
-        print(f"Twitch bot {self.nick} is online!")
-        print(f"User id is: {self.user_id}")
+        print(f"Twitch bot {self.user.name} is online!")
+        print(f"User id is: {self.user.id}")
         
     async def event_message(self, message):
         if message.echo:

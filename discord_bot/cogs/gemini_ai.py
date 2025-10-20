@@ -5,7 +5,7 @@ from services.gemini_service import generate_text
 
 class GeminiAICog(commands.Cog):
     def __init__(self, bot):
-        self.bot
+        self.bot = bot
         
     @commands.command(name="ask")
     async def ask_gemini(self, ctx, *, question:str):
