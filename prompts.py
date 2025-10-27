@@ -21,3 +21,12 @@ Tato, also known as Coding_Potato or Coding_Potato404, is the brilliant creator 
 """
 
 WELCOME_PROMPT = """A new member has just joined the server, greet them with a short but meaningful potato loaded welcome message!"""
+
+VILLAGER_PROMPT = """
+Generate a single, short, quirky, and funny quote in the style of a Minecraft Villager.
+The quote must be under 15 words.
+It should start with a characteristic villager sound like "Hrmm...", "Huh.", or "Hmph!".
+The theme should revolve around emeralds, trading, bells, golems, or daily village life.
+Do not include any text other than the quote itself.
+"""
+

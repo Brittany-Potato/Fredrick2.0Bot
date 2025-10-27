@@ -9,7 +9,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 async def generate_text(user_question: str, user_id: str = None, platform: str = None) -> str:
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         
         context_facts = ""
         if user_id and platform:
@@ -32,3 +32,15 @@ async def generate_text(user_question: str, user_id: str = None, platform: str =
     except Exception as e:
         print(f"An error occured with Gemini AI: {e}")
         return "Sorry, I'm having a-peel-ing technical difficulties right now!"
+    
+async def generate_themed_response(prompt: str) -> str:
+    """A simple generator for creative, one-off text snippets"""
+    try:
+        model = genai.GenerativeModel('gemini-2.0-flash')
+        
+        print(f"---[AI] Generating themed response... ---")
+        response = await model.generate_content_async(prompt)
+        return response.text.strip()
+    except Exception as e:
+        prit(f"An error occured with Gemini AI (Themed): {e}")
+        return "Hrmm... I forgot what I was going to say."
