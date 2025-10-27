@@ -1,1 +1,24 @@
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+.envvenv/
+ENV/
+env/
+
+# Editor / OS
+.vscode/
+.DS_Store
+
+# Test / tooling
+.pytest_cache/
+
+# Local tokens
+.tio.tokens.json
