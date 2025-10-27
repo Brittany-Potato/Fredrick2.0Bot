@@ -11,7 +11,8 @@ class GeminiAICog(commands.Cog):
     async def ask_gemini(self, ctx, *, question:str):
         """Asks a question to Gemini"""
         async with ctx.typing():
-            response = await generate_text(question)
+            # --- MODIFIED: Pass the author's ID and platform ---
+            response = await generate_text(question, str(ctx.author.id), "discord")
             await ctx.send(response)
             
 async def setup(bot):

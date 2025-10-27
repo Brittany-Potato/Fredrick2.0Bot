@@ -6,5 +6,6 @@ from services.gemini_service import generate_text
 @commands.command(name="ask")
 async def ask(ctx: commands.Context, *, question: str):
     """Asks Gemini a question"""
-    response = await generate_text(question)
+    # --- MODIFIED: Pass the author's ID and platform ---
+    response = await generate_text(question, str(ctx.author.id), "twitch")
     await ctx.send(response)

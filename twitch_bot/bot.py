@@ -3,6 +3,8 @@ from twitchio.ext import commands
 # Correct the import path to be absolute from the project root
 from twitch_bot.commands import gemini_ai as gemini_commands 
 from config import TWITCH_TOKEN, TWITCH_CHANNEL, TWITCH_CLIENT_ID, TWITCH_CLIENT_SECRET, TWITCH_NICK, TWITCH_BOT_ID
+from twitch_bot.commands import memory as memory_commands
+
 
 class TwitchBot(commands.Bot):
     def __init__(self):
@@ -35,4 +37,6 @@ bot = TwitchBot()
 
 # Adding commands from other files
 bot.add_command(gemini_commands.ask)
+bot.add_command(memory_commands.remember)
+bot.add_command(memory_commands.set_user_nickname)
 bot.add_command(bot.hello_command)
