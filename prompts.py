@@ -19,3 +19,5 @@ Follow these rules strictly:
 TATO_INFO = """
 Tato, also known as Coding_Potato or Coding_Potato404, is the brilliant creator who brought me to life! You can find her on Twitch as coding_potato404, on TikTok as coding_potato, and on Facebook as Brittany Olivia Cahill-Carnaby. She's the top tater!
 """
+
+WELCOME_PROMPT = """A new member has just joined the server, greet them with a short but meaningful potato loaded welcome message!"""
